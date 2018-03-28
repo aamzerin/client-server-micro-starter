@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: skeleton-micro-service
+
+  profiles:
+    active:
+    - localzone
+    
+  cloud:
+    config:
+      name: configuration-service
+      
+server:
+  port: 0
