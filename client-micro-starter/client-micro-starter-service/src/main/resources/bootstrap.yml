@@ -1,6 +1,6 @@
 spring:
   application:
-    name: skeleton-micro-service
+    name: client-micro-starter-service
 
   profiles:
     active:
@@ -8,7 +8,7 @@ spring:
     
   cloud:
     config:
-      name: configuration-service
+      uri: http://localhost:8889
       
 server:
   port: 0
