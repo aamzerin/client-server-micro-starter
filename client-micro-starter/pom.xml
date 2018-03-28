@@ -14,4 +14,14 @@
 		<module>client-micro-starter-client</module>
 	</modules>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.aamzerin.micro.start</groupId>
+				<artifactId>client-micro-starter-client</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 </project>
