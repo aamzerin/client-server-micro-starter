@@ -1,11 +1,14 @@
 package io.aamzerin.micro.start.server.web;
 
+import org.springframework.web.bind.annotation.RestController;
+
 import io.aamzerin.micro.start.server.domain.GetDataItemRequest;
 import io.aamzerin.micro.start.server.domain.ServerData;
 import io.aamzerin.micro.start.server.service.ServerPublicService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@RestController
 public class ServerController implements ServerPublicService{
 
 	@Override
