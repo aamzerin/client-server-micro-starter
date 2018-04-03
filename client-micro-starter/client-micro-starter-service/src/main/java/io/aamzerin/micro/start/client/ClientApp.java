@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients("io.aamzerin.microservices.**.service")
+@EnableFeignClients("io.aamzerin.micro.**.service")
 public class ClientApp {
 
 	public static void main(String[] args) {

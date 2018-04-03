@@ -11,13 +11,13 @@ import reactor.core.publisher.Flux;
 @Configuration
 public class ServerUtils {
 	
-	@Bean
-	ApplicationRunner demoData(DataRepository dataRepository){
-		return args -> {
-			dataRepository.deleteAll()
-					.thenMany(Flux.just("Text Data", "Binary Data").map(content -> new ServerData(null, content))
-							.flatMap(dataRepository::save))
-					.thenMany(dataRepository.findAll()).subscribe(System.out::println);
-		};
-	}
+//	@Bean
+//	ApplicationRunner demoData(DataRepository dataRepository){
+//		return args -> {
+//			dataRepository.deleteAll()
+//					.thenMany(Flux.just("Text Data", "Binary Data").map(content -> new ServerData(null, content))
+//							.flatMap(dataRepository::save))
+//					.thenMany(dataRepository.findAll()).subscribe(System.out::println);
+//		};
+//	}
 }

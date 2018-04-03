@@ -12,9 +12,10 @@ import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRep
 
 @EnableDiscoveryClient
 @EnableFeignClients("io.aamzerin.micro.**.service")
-@SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
-@EnableReactiveMongoRepositories
-@AutoConfigureAfter(EmbeddedMongoAutoConfiguration.class)
+@SpringBootApplication
+//@SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
+//@EnableReactiveMongoRepositories
+//@AutoConfigureAfter(EmbeddedMongoAutoConfiguration.class)
 public class ServerApp {
 
 	public static void main(String[] args) {
