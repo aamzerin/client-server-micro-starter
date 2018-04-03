@@ -23,6 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.M9</spring-cloud.version>
+        <mongodb-driver-reactivestreams.version>1.5.0</mongodb-driver-reactivestreams.version>
 	</properties>
 
 	<dependencyManagement>
