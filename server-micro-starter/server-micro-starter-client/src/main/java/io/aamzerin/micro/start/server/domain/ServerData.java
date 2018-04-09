@@ -1,20 +1,42 @@
 package io.aamzerin.micro.start.server.domain;
 
-import java.util.UUID;
-
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Data
-@Document
-@AllArgsConstructor
+
 public class ServerData {
 
 	@Id
-	private UUID id;
+	@JsonProperty("id")
+	private Integer id;
+	
+	@JsonProperty("content")
 	private String content;
+	
+	public ServerData() {
+	}
 
+	public ServerData(Integer id, String content) {
+		super();
+		this.id = id;
+		this.content = content;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
 }

@@ -1,12 +1,13 @@
 package io.aamzerin.micro.start.client.service;
 
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import io.aamzerin.micro.start.client.domain.ClientData;
-import io.aamzerin.micro.start.client.domain.GetDataItemFromServerRequest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -14,7 +15,7 @@ import reactor.core.publisher.Mono;
 public interface ClientPublicService {
 
 	@PostMapping("/getByContent")
-	public Mono<ClientData> getDataItemFromServer(@RequestBody GetDataItemFromServerRequest request);
+	public Mono<List<ClientData>> getDataItemFromServer(@RequestBody String content);
 	
 	@GetMapping("/getAll")
 	public Flux<ClientData> getDataFromServer();

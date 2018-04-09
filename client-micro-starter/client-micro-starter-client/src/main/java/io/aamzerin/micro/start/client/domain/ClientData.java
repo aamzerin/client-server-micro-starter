@@ -1,16 +1,42 @@
 package io.aamzerin.micro.start.client.domain;
 
-import java.util.UUID;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
-@AllArgsConstructor
 public class ClientData {
 
-	private UUID id;
+	@JsonProperty("id")
+	private Integer id;
+	
+	@JsonProperty("content")
 	private String content;
+
+	public ClientData(){
+		
+	}
+	
+	public ClientData(Integer id, String content) {
+		super();
+		this.id = id;
+		this.content = content;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
+	
 
 }
 
