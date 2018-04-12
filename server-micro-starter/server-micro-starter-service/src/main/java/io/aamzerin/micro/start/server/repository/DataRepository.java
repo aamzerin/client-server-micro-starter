@@ -1,11 +1,12 @@
 package io.aamzerin.micro.start.server.repository;
 
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import io.aamzerin.micro.start.server.domain.ServerData;
-import reactor.core.publisher.Flux;
 
-public interface DataRepository extends ReactiveCrudRepository<ServerData, String>{
+public interface DataRepository extends MongoRepository<ServerData, String>{
 
-	Flux<ServerData> findByContent(String content);
+	List<ServerData> findByContent(String content);
 }

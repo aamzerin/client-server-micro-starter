@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClientData {
 
 	@JsonProperty("id")
-	private Integer id;
+	private String id;
 	
 	@JsonProperty("content")
 	private String content;
@@ -14,17 +14,17 @@ public class ClientData {
 		
 	}
 	
-	public ClientData(Integer id, String content) {
+	public ClientData(String id, String content) {
 		super();
 		this.id = id;
 		this.content = content;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

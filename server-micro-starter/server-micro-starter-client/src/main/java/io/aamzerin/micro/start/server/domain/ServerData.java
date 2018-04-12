@@ -9,7 +9,7 @@ public class ServerData {
 
 	@Id
 	@JsonProperty("id")
-	private Integer id;
+	private String id;
 	
 	@JsonProperty("content")
 	private String content;
@@ -17,17 +17,17 @@ public class ServerData {
 	public ServerData() {
 	}
 
-	public ServerData(Integer id, String content) {
+	public ServerData(String id, String content) {
 		super();
 		this.id = id;
 		this.content = content;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
